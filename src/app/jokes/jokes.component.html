@@ -1,0 +1,19 @@
+<h2>My Jokes</h2>
+<div class="row">
+
+    <ul class="jokes">
+        <li *ngFor="let joke of jokes">
+            <span class="badge" (click)="onSelect(joke)">{{joke.id}}</span>
+        </li>
+    </ul>
+
+
+    <div *ngIf="selectedJoke">
+        <h2> Details</h2>
+        <div><span>id: </span>{{selectedJoke.id}}</div>
+        <div><span>type: </span>{{selectedJoke.type}}</div>
+        <div><span>setup: </span>{{selectedJoke.setup}}</div>
+        <div><span>punchline: </span>{{selectedJoke.punchline}}</div>
+    </div>
+
+</div>

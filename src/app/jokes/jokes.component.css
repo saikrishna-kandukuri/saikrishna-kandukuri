@@ -1,0 +1,47 @@
+/* jokesComponent's private CSS styles */
+.jokes {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    float: left;
+  }
+  .jokes li {
+    position: relative;
+    left: 0;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+  
+  .jokes li:hover {
+    left: .1em;
+  }
+
+  .jokes li.selected {
+    background-color: #CFD8DC;
+    color: white;
+  }
+
+  .jokes li.selected:hover {
+    background-color: #BBD8DC;
+    color: white;
+  }
+
+  .jokes .badge:hover{
+    cursor: pointer;
+  }
+
+  .jokes .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color:#405061;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    border-radius: 4px 4px 4px 4px;
+    width: 30px;
+  }
