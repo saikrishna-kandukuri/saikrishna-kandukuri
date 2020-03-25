@@ -1,20 +1,20 @@
-<h2>My Jokes</h2>
-<div class="row">
-
-    <ul class="jokes">
-        <li *ngFor="let joke of jokes">
-            <span class="badge" (click)="onSelect(joke)">{{joke.id}}</span>
-        </li>
-    </ul>
-
-
-    
-    <div *ngIf="selectedJoke">
-        <h2> Details</h2>
-        <div><span>id: </span>{{selectedJoke.id}}</div>
-        <div><span>type: </span>{{selectedJoke.type}}</div>
-        <div><span>setup: </span>{{selectedJoke.setup}}</div>
-        <div><span>punchline: </span>{{selectedJoke.punchline}}</div>
-    </div>
-
-</div>
+<h2 style="text-align: center;">List Of Jokes</h2>
+<hr>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Type</th>
+            <th scope="col">Setup</th>
+            <th scope="col">Punchline</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let joke of jokes">
+            <th scope="row">{{ joke.id }}</th>
+            <td>{{ joke.type }}</td>
+            <td>{{ joke.setup }}</td>
+            <td>{{ joke.punchline }}</td>
+        </tr>
+    </tbody>
+</table>
